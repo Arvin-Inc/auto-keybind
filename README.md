@@ -1,8 +1,8 @@
 # Setup SA-MP dan Auto Keybind
 
-Panduan untuk pemain GTA San Andreas PC yang ingin menjalankan [Auto Keybind](monetloader/autoKeybind.lua) melalui MoonLoader. Script membuka panel `/autokey` untuk mengulang tombol Y, ALT, F, H, SPC (spasi), atau N dengan delay yang dipilih.
+Panduan untuk pemain GTA San Andreas PC yang ingin menjalankan [Auto Keybind 1.0.2](monetloader/AutoKeybind-1.0.2.lua) melalui MoonLoader. Script membuka panel `/autokey` untuk mengulang tombol Y, ALT, F, H, SPC (spasi), atau N dengan delay yang dipilih.
 
-Script ditujukan untuk Lua 5.1/LuaJIT bawaan MoonLoader. Nama folder `monetloader/` di repository merupakan lokasi penyimpanan source; pemasangannya tetap ke folder `moonloader/` milik game PC.
+Script ditujukan untuk Lua 5.1/LuaJIT bawaan MoonLoader. File distribusi `AutoKeybind-1.0.2.lua` telah diobfuscate oleh pembuat script. Nama folder `monetloader/` di repository merupakan lokasi penyimpanan file distribusi; pemasangannya tetap ke folder `moonloader/` milik game PC.
 
 ## Bahan yang sudah tersedia
 
@@ -11,7 +11,8 @@ Inventaris ini mengikuti isi folder `setupSamp` yang diperiksa pada 29 Oktober 2
 | Bahan | File di repository | Pemakaian |
 | --- | --- | --- |
 | Installer MoonLoader 0.26 | [setup-moonloader-026.exe](setup-moonloader-026.exe) | Jalankan dan arahkan ke folder GTA San Andreas. |
-| Script Auto Keybind | [monetloader/autoKeybind.lua](monetloader/autoKeybind.lua) | Salin ke `moonloader/` pada folder game. |
+| Installer client SA-MP R1 | [2.sa-mp-0.3.7-R1-install.exe](2.sa-mp-0.3.7-R1-install.exe) | Installer yang tersedia bernama R1; cocokkan versi client dengan server dan SAMPFUNCS. |
+| Script Auto Keybind obfuscated | [monetloader/AutoKeybind-1.0.2.lua](monetloader/AutoKeybind-1.0.2.lua) | Salin ke `moonloader/` pada folder game. |
 | SAMPFUNCS 5.7.1 untuk SA-MP 0.3.7-R3-1 | [SAMPFUNCS.asi varian R3-1](SAMPFUNCS-5.7.1/SA-MP%200.3.7-R3-1/SAMPFUNCS.asi) | Gunakan hanya untuk client yang sesuai. |
 | SAMPFUNCS 5.7.1 untuk SA-MP 0.3.7-R5 | [SAMPFUNCS.asi varian R5](SAMPFUNCS-5.7.1/SA-MP%200.3.7-R5/SAMPFUNCS.asi) | Gunakan hanya untuk client yang sesuai. |
 | SAMPFUNCS 5.7.1 untuk SA-MP 0.3.DL | [SAMPFUNCS.asi varian 0.3.DL](SAMPFUNCS-5.7.1/SA-MP%200.3.DL/SAMPFUNCS.asi) | Gunakan hanya untuk client yang sesuai. |
@@ -27,7 +28,7 @@ Walaupun README bawaan SAMPFUNCS menyebut dukungan R1, file varian **SA-MP 0.3.7
 | Bahan | Ketersediaan di repository | Link dan petunjuk |
 | --- | --- | --- |
 | GTA San Andreas PC | Game tidak disertakan. | [Halaman produk Rockstar](https://store.rockstargames.com/game/buy-grand-theft-auto-the-trilogy). Gunakan instalasi game yang kompatibel dengan SA-MP dan MoonLoader; pembelian game saja belum memverifikasi kompatibilitas executable-nya. |
-| Client SA-MP atau launcher | Installer client belum tersedia. | [open.mp Launcher](https://open.mp/downloads/launcher) menyediakan launcher untuk server open.mp dan SA-MP. Pilih versi client sesuai kebutuhan server dan varian SAMPFUNCS. Kombinasi launcher, client, dan plugin tetap perlu diperiksa saat menjalankan game. |
+| Client SA-MP atau launcher selain installer R1 di atas | Installer versi lain belum tersedia. | [open.mp Launcher](https://open.mp/downloads/launcher) menyediakan launcher untuk server open.mp dan SA-MP. Pilih versi client sesuai kebutuhan server dan varian SAMPFUNCS. Kombinasi launcher, client, dan plugin tetap perlu diperiksa saat menjalankan game. |
 | mimgui v1.7.1 | Paket ZIP dan folder library belum disertakan. | Unduh **`mimgui-v1.7.1.zip`** dari [rilis resmi mimgui](https://github.com/THE-FYP/mimgui/releases/tag/v1.7.1). Ekstrak folder `mimgui` ke `moonloader/lib/`. |
 | CLEO 4.1 atau lebih baru | Tidak ada paket CLEO terpisah. | Periksa apakah CLEO sudah terpasang pada game. Bila belum, gunakan [rilis CLEO 4](https://github.com/cleolibrary/CLEO4/releases) sesuai petunjuk pembuatnya. |
 | ASI Loader | Tidak ada paket loader mandiri. Paket voice memuat DLL hook. | Jika game belum memiliki ASI Loader, gunakan [Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases) untuk game 32-bit dan ikuti petunjuk pemasangan GTA San Andreas dari pembuatnya. |
@@ -42,9 +43,9 @@ Walaupun README bawaan SAMPFUNCS menyebut dukungan R1, file varian **SA-MP 0.3.7
 3. Jalankan [installer MoonLoader yang tersedia](setup-moonloader-026.exe) dan pilih folder game yang berisi `gta_sa.exe`.
 4. Pilih salah satu varian SAMPFUNCS pada tabel di atas, kemudian salin `SAMPFUNCS.asi` ke folder game. Jika memakai client R1, unduh varian R1 melalui link yang disediakan.
 5. Unduh paket binary `mimgui-v1.7.1.zip` dan ekstrak folder `mimgui` ke `moonloader/lib/`. Gunakan paket binary tersebut agar `cimguidx9.dll` ikut terpasang.
-6. Salin [autoKeybind.lua](monetloader/autoKeybind.lua) ke `moonloader/`. Folder `docs/` dan `tests/` tidak perlu disalin ke game.
+6. Salin [AutoKeybind-1.0.2.lua](monetloader/AutoKeybind-1.0.2.lua) ke `moonloader/`. Pasang satu versi Auto Keybind agar perintah `/autokey` tidak didaftarkan oleh beberapa salinan sekaligus. Folder dokumentasi tidak perlu disalin ke game.
 7. Jalankan ulang game, masuk ke server, lalu cari pesan `[AutoKey] Siap` di chat.
-8. Ketik `/autokey`, pilih tombol dan delay, lalu klik **Mulai**. Gunakan **F10** untuk berhenti, atau buka panel lagi dan klik **Berhenti**.
+8. Ketik `/autokey`, pilih tombol dan delay, lalu klik **Mulai**. Tombol yang dipilih langsung ditekan dan panel tetap terbuka. Gunakan **F10** atau tombol **Berhenti** untuk menghentikan pengulangan.
 
 Contoh hasil pemasangan pada game di `C:\samp`:
 
@@ -55,7 +56,7 @@ C:\samp\
   MoonLoader.asi
   SAMPFUNCS.asi
   moonloader\
-    autoKeybind.lua
+    AutoKeybind-1.0.2.lua
     lib\
       vkeys.lua
       mimgui\
@@ -84,6 +85,12 @@ Setelah memperbaiki pemasangan, tutup dan jalankan ulang game agar script dimuat
 
 ## Panduan perilaku dan batas verifikasi
 
-[Dokumentasi Auto Keybind](monetloader/docs/auto-keybind.md) menjelaskan delay, kondisi jeda, penghentian, dan pengujian. Delay dihitung setelah tombol dilepas; pengulangan dijeda ketika panel, chat, atau dialog terbuka.
+[Dokumentasi Auto Keybind](monetloader/docs/auto-keybind.md) menjelaskan delay, kondisi jeda, penghentian, dan pengujian. Tekanan pertama langsung dikirim saat Mulai diklik, lalu delay dihitung setelah tombol dilepas untuk pengulangan berikutnya. Panel dapat tetap terbuka selama pengulangan; chat dan dialog tetap menjeda input.
 
-Inventaris file dan referensi path dapat diperiksa dari repository ini. Keberadaan file belum membuktikan plugin berhasil dimuat, UI tampil, atau tombol direspons server. Kompatibilitas client/SAMPFUNCS, paket voice, serta perilaku langsung di game masih perlu diverifikasi pada instalasi pemain.
+Inventaris file dan referensi path dapat diperiksa dari repository ini. Keberadaan file belum membuktikan plugin berhasil dimuat, UI tampil, atau tombol direspons server. File distribusi setelah obfuscation belum diuji melalui game. Kompatibilitas client/SAMPFUNCS, paket voice, serta perilaku langsung di game masih perlu diverifikasi pada instalasi pemain.
+
+## File untuk Git
+
+`monetloader/AutoKeybind-1.0.2.lua` merupakan file script yang disertakan dalam commit untuk distribusi. Source pengembangan `monetloader/autoKeybind.lua` dan folder `monetloader/tests/` disimpan secara lokal dan dikecualikan melalui [.gitignore](.gitignore).
+
+Mengeluarkan source dan tes dari index Git mempertahankan file lokalnya. Aturan ini berlaku untuk commit berikutnya dan tidak menghapus salinan yang sudah ada di riwayat commit lama.
