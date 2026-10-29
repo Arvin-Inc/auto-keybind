@@ -1,4 +1,4 @@
-# Setup SA-MP dan Auto Keybind
+# Setup SA-MP dan Script
 
 Panduan untuk pemain GTA San Andreas PC yang ingin menjalankan [Auto Keybind 1.0.2](monetloader/AutoKeybind-1.0.2.lua) melalui MoonLoader. Script membuka panel `/autokey` untuk mengulang tombol Y, ALT, F, H, SPC (spasi), atau N dengan delay yang dipilih.
 
@@ -10,6 +10,7 @@ Inventaris ini mengikuti isi folder `setupSamp` yang diperiksa pada 29 Oktober 2
 
 | Bahan | File di repository | Pemakaian |
 | --- | --- | --- |
+| Installer Client Samp 0.3.7 R1|[2.sa-mp-0.3.7-R1-install.exe](2.sa-mp-0.3.7-R1-install.exe)|Instal file ini lalu jalankan dan arahkan ke folder tempat anda menyimpan GTA anda|
 | Installer MoonLoader 0.26 | [setup-moonloader-026.exe](setup-moonloader-026.exe) | Jalankan dan arahkan ke folder GTA San Andreas. |
 | Installer client SA-MP R1 | [2.sa-mp-0.3.7-R1-install.exe](2.sa-mp-0.3.7-R1-install.exe) | Installer yang tersedia bernama R1; cocokkan versi client dengan server dan SAMPFUNCS. |
 | Script Auto Keybind obfuscated | [monetloader/AutoKeybind-1.0.2.lua](monetloader/AutoKeybind-1.0.2.lua) | Salin ke `moonloader/` pada folder game. |
