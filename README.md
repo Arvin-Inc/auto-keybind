@@ -1,4 +1,4 @@
-# Setup SA-MP dan Auto Keybind
+# Setup SA-MP dan Script
 
 Panduan untuk pemain GTA San Andreas PC yang ingin menjalankan [Auto Keybind](monetloader/autoKeybind.lua) melalui MoonLoader. Script membuka panel `/autokey` untuk mengulang tombol Y, ALT, F, H, SPC (spasi), atau N dengan delay yang dipilih.
 
