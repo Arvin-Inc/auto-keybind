@@ -6,11 +6,32 @@ Target runtime adalah GTA San Andreas PC dengan SA-MP, bukan MonetLoader Android
 ## Pemasangan
 
 1. Siapkan GTA San Andreas, SA-MP, MoonLoader 0.26 atau versi yang kompatibel, dan SAMPFUNCS yang cocok dengan versi SA-MP.
-2. Pasang [mimgui](https://github.com/THE-FYP/mimgui) beserta dependensinya di instalasi MoonLoader. Pastikan `require 'mimgui'` dapat dijalankan. Library `vkeys` tersedia dalam paket MoonLoader, sedangkan `bit` merupakan modul LuaJIT.
+2. Tutup game, lalu unduh **`mimgui-v1.7.1.zip`** dari [rilis resmi mimgui](https://github.com/THE-FYP/mimgui/releases/tag/v1.7.1). Ekstrak folder `mimgui` dari paket tersebut ke `moonloader/lib/`. Gunakan paket binary ini agar `cimguidx9.dll` ikut terpasang. Library `vkeys` tersedia dalam paket MoonLoader, sedangkan `bit` merupakan modul LuaJIT.
 3. Salin `autoKeybind.lua` ke folder `moonloader/` di direktori game.
 4. Jalankan game dan masuk ke server. Pesan `[AutoKey] Siap` menandakan perintah telah didaftarkan.
 
 Jika panel tidak terbuka, periksa `moonloader/moonloader.log`, khususnya pesan tentang modul yang hilang atau SAMPFUNCS yang tidak kompatibel.
+
+Pada instalasi game di `C:\samp`, susunan file yang diperlukan adalah:
+
+```text
+C:\samp\
+  SAMPFUNCS.asi
+  moonloader\
+    autoKeybind.lua
+    lib\
+      mimgui\
+        init.lua
+        cdefs.lua
+        imgui.lua
+        dx9.lua
+        win32.lua
+        cimguidx9.dll
+```
+
+SAMPFUNCS dan mimgui merupakan dua dependensi terpisah. File `moonloader/lib/sampfuncs.lua` tidak menggantikan plugin `SAMPFUNCS.asi`.
+
+Error `autoKeybind.lua:5: module 'mimgui' not found` berarti script berhenti sebelum perintah `/autokey` didaftarkan. Pastikan `moonloader/lib/mimgui/init.lua` tersedia, bukan berada di folder tambahan seperti `moonloader/lib/mimgui-v1.7.1/mimgui/init.lua`. Setelah library dipasang, tutup dan jalankan ulang game agar script dimuat lagi. Bila error berubah, periksa log dari sesi terbaru untuk mengetahui dependensi atau masalah berikutnya.
 
 ## Penggunaan
 

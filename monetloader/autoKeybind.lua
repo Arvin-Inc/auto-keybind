@@ -175,6 +175,7 @@ function main()
         nextPressAt = nowMs() + delay[0]
     end)
     notify('Siap. Ketik /autokey untuk membuka panel.')
+    notify('Author: Arvin_Inc')
 
     while true do
         wait(0)
