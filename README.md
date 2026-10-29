@@ -10,6 +10,7 @@ Inventaris ini mengikuti isi folder `setupSamp` yang diperiksa pada 29 Oktober 2
 
 | Bahan | File di repository | Pemakaian |
 | --- | --- | --- |
+| Installer Client Samp 0.3.7 R1|[2.sa-mp-0.3.7-R1-install.exe](2.sa-mp-0.3.7-R1-install.exe)|Instal file ini lalu jalankan dan arahkan ke folder tempat anda menyimpan GTA anda|
 | Installer MoonLoader 0.26 | [setup-moonloader-026.exe](setup-moonloader-026.exe) | Jalankan dan arahkan ke folder GTA San Andreas. |
 | Script Auto Keybind | [monetloader/autoKeybind.lua](monetloader/autoKeybind.lua) | Salin ke `moonloader/` pada folder game. |
 | SAMPFUNCS 5.7.1 untuk SA-MP 0.3.7-R3-1 | [SAMPFUNCS.asi varian R3-1](SAMPFUNCS-5.7.1/SA-MP%200.3.7-R3-1/SAMPFUNCS.asi) | Gunakan hanya untuk client yang sesuai. |
