@@ -5,6 +5,8 @@ Target runtime adalah GTA San Andreas PC dengan SA-MP, bukan MonetLoader Android
 
 ## Pemasangan
 
+Lihat [README setupSamp](../../README.md) untuk daftar bahan yang sudah tersedia, pilihan varian SAMPFUNCS, prasyarat CLEO/ASI Loader, dan link unduhan bahan yang belum disertakan dalam repository.
+
 1. Siapkan GTA San Andreas, SA-MP, MoonLoader 0.26 atau versi yang kompatibel, dan SAMPFUNCS yang cocok dengan versi SA-MP.
 2. Tutup game, lalu unduh **`mimgui-v1.7.1.zip`** dari [rilis resmi mimgui](https://github.com/THE-FYP/mimgui/releases/tag/v1.7.1). Ekstrak folder `mimgui` dari paket tersebut ke `moonloader/lib/`. Gunakan paket binary ini agar `cimguidx9.dll` ikut terpasang. Library `vkeys` tersedia dalam paket MoonLoader, sedangkan `bit` merupakan modul LuaJIT.
 3. Salin `autoKeybind.lua` ke folder `moonloader/` di direktori game.
