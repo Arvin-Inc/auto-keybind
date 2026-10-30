@@ -22,4 +22,6 @@ Untuk petunjuk langkah demi langkah mengenai cara unduh, pemasangan game dasar, 
 * 🔴 **Voice Chat:** Plugin Voice (R1/R2)
 * ⚡ **Script:** Auto Keybind (`AutoKeybind-1.0.2.lua`)
 
+Untuk mendapatkan source di atas anda bisa kunjungin [Release](https://github.com/Arvin-Inc/sampSetupIndonesia/releases)
+
 > 💡 *Daftar file di atas beserta syarat prasyarat seperti CLEO, ASI Loader, dan mimgui dibahas secara detail di [Wiki](https://github.com/Arvin-Inc/sampSetupIndonesia/wiki).*
