@@ -2,18 +2,18 @@
 
 Panduan untuk pemain GTA San Andreas PC yang ingin menjalankan [Auto Keybind 1.0.2](monetloader/AutoKeybind-1.0.2.lua) melalui MoonLoader. Script membuka panel `/autokey` untuk mengulang tombol Y, ALT, F, H, SPC (spasi), atau N dengan delay yang dipilih.
 
-Script ditujukan untuk Lua 5.1/LuaJIT bawaan MoonLoader. File distribusi `AutoKeybind-1.0.2.lua` telah diobfuscate oleh pembuat script. Nama folder `monetloader/` di repository merupakan lokasi penyimpanan file distribusi; pemasangannya tetap ke folder `moonloader/` milik game PC.
+Script ditujukan untuk Lua 5.1/LuaJIT bawaan MoonLoader. Nama file distribusi obfuscated adalah `AutoKeybind-1.0.2.lua`. Perubahan pada source lokal perlu diobfuscate ulang sebelum dirilis. Nama folder `monetloader/` di repository merupakan lokasi penyimpanan file distribusi; pemasangannya tetap ke folder `moonloader/` milik game PC.
 
 ## Bahan yang sudah tersedia
 
-Inventaris ini mengikuti isi folder `setupSamp` yang diperiksa pada 29 Oktober 2026. File yang terpasang di folder game komputer pembuat tidak otomatis termasuk dalam repository ini.
+Inventaris ini mengikuti isi folder `setupSamp` yang diperiksa pada 30 Oktober 2026. File yang terpasang di folder game komputer pembuat tidak otomatis termasuk dalam repository ini.
 
 | Bahan | File di repository | Pemakaian |
 | --- | --- | --- |
 | Installer Client Samp 0.3.7 R1|[2.sa-mp-0.3.7-R1-install.exe](2.sa-mp-0.3.7-R1-install.exe)|Instal file ini lalu jalankan dan arahkan ke folder tempat anda menyimpan GTA anda|
 | Installer MoonLoader 0.26 | [setup-moonloader-026.exe](setup-moonloader-026.exe) | Jalankan dan arahkan ke folder GTA San Andreas. |
 | Installer client SA-MP R1 | [2.sa-mp-0.3.7-R1-install.exe](2.sa-mp-0.3.7-R1-install.exe) | Installer yang tersedia bernama R1; cocokkan versi client dengan server dan SAMPFUNCS. |
-| Script Auto Keybind obfuscated | [monetloader/AutoKeybind-1.0.2.lua](monetloader/AutoKeybind-1.0.2.lua) | Salin ke `moonloader/` pada folder game. |
+| Script Auto Keybind obfuscated | [monetloader/AutoKeybind-1.0.2.lua](monetloader/AutoKeybind-1.0.2.lua) | File distribusi yang dibuat dari source pengembangan terbaru. Salin satu versi script ke `moonloader/`. |
 | SAMPFUNCS 5.7.1 untuk SA-MP 0.3.7-R3-1 | [SAMPFUNCS.asi varian R3-1](SAMPFUNCS-5.7.1/SA-MP%200.3.7-R3-1/SAMPFUNCS.asi) | Gunakan hanya untuk client yang sesuai. |
 | SAMPFUNCS 5.7.1 untuk SA-MP 0.3.7-R5 | [SAMPFUNCS.asi varian R5](SAMPFUNCS-5.7.1/SA-MP%200.3.7-R5/SAMPFUNCS.asi) | Gunakan hanya untuk client yang sesuai. |
 | SAMPFUNCS 5.7.1 untuk SA-MP 0.3.DL | [SAMPFUNCS.asi varian 0.3.DL](SAMPFUNCS-5.7.1/SA-MP%200.3.DL/SAMPFUNCS.asi) | Gunakan hanya untuk client yang sesuai. |
@@ -46,7 +46,7 @@ Walaupun README bawaan SAMPFUNCS menyebut dukungan R1, file varian **SA-MP 0.3.7
 5. Unduh paket binary `mimgui-v1.7.1.zip` dan ekstrak folder `mimgui` ke `moonloader/lib/`. Gunakan paket binary tersebut agar `cimguidx9.dll` ikut terpasang.
 6. Salin [AutoKeybind-1.0.2.lua](monetloader/AutoKeybind-1.0.2.lua) ke `moonloader/`. Pasang satu versi Auto Keybind agar perintah `/autokey` tidak didaftarkan oleh beberapa salinan sekaligus. Folder dokumentasi tidak perlu disalin ke game.
 7. Jalankan ulang game, masuk ke server, lalu cari pesan `[AutoKey] Siap` di chat.
-8. Ketik `/autokey`, pilih tombol dan delay, lalu klik **Mulai**. Tombol yang dipilih langsung ditekan dan panel tetap terbuka. Gunakan **F10** atau tombol **Berhenti** untuk menghentikan pengulangan.
+8. Ketik `/autokey`, pilih tombol dan delay, lalu klik **Mulai**. Tombol yang dipilih ditekan pada frame game berikutnya tanpa menunggu delay, dan panel tetap terbuka. Gunakan **F10** atau tombol **Berhenti** untuk menghentikan pengulangan.
 
 Contoh hasil pemasangan pada game di `C:\samp`:
 
@@ -86,12 +86,18 @@ Setelah memperbaiki pemasangan, tutup dan jalankan ulang game agar script dimuat
 
 ## Panduan perilaku dan batas verifikasi
 
-[Dokumentasi Auto Keybind](monetloader/docs/auto-keybind.md) menjelaskan delay, kondisi jeda, penghentian, dan pengujian. Tekanan pertama langsung dikirim saat Mulai diklik, lalu delay dihitung setelah tombol dilepas untuk pengulangan berikutnya. Panel dapat tetap terbuka selama pengulangan; chat dan dialog tetap menjeda input.
+[Dokumentasi Auto Keybind](monetloader/docs/auto-keybind.md) menjelaskan delay, kondisi jeda, penghentian, dan pengujian. Klik Mulai mengirim tekanan pertama pada frame game berikutnya tanpa menunggu delay, lalu delay dihitung setelah tombol dilepas untuk pengulangan berikutnya. Panel dapat tetap terbuka selama pengulangan. Kondisi jeda source saat ini mencakup pause, kehilangan fokus game, dan kursor SA-MP saat panel tertutup.
 
-Inventaris file dan referensi path dapat diperiksa dari repository ini. Keberadaan file belum membuktikan plugin berhasil dimuat, UI tampil, atau tombol direspons server. File distribusi setelah obfuscation belum diuji melalui game. Kompatibilitas client/SAMPFUNCS, paket voice, serta perilaku langsung di game masih perlu diverifikasi pada instalasi pemain.
+Source pengembangan dan file obfuscated masing-masing lulus 16 kelompok pengujian stub MoonLoader/mimgui, serta pemeriksaan sintaks Lua 5.1. Inventaris file dan referensi path juga diperiksa. Pengujian stub belum membuktikan plugin berhasil dimuat, UI tampil, atau tombol direspons server. File distribusi setelah obfuscation belum diuji melalui game. Kompatibilitas client/SAMPFUNCS, paket voice, serta perilaku langsung di game masih perlu diverifikasi pada instalasi pemain.
+
+## Obfuscation
+
+File distribusi mengganti nama variabel lokal, menyamarkan 38 string sebagai angka yang dibaca kembali saat script berjalan, dan memadatkan kode. Identitas `Arvin_Inc`, versi script, serta hash SHA256 source dicantumkan pada header file. Proses pembuatan dilakukan lokal dan tidak menambahkan dependensi runtime bagi pemain.
+
+Obfuscation membuat kode lebih sulit dibaca langsung, tetapi bukan jaminan kode tidak dapat dipulihkan. Source tetap disimpan lokal untuk pengembangan. Source yang sudah ada dalam riwayat Git tidak tersembunyi hanya dengan mengobfuscate file distribusi.
 
 ## File untuk Git
 
-`monetloader/AutoKeybind-1.0.2.lua` merupakan file script yang disertakan dalam commit untuk distribusi. Source pengembangan `monetloader/autoKeybind.lua` dan folder `monetloader/tests/` disimpan secara lokal dan dikecualikan melalui [.gitignore](.gitignore).
+`monetloader/AutoKeybind-1.0.2.lua` merupakan file script yang ditujukan untuk commit distribusi. Setelah source diperbaiki, buat ulang hasil obfuscation sebelum menyertakannya dalam commit. Source pengembangan `monetloader/autoKeybind.lua` dan folder `monetloader/tests/` disimpan secara lokal dan dikecualikan melalui [.gitignore](.gitignore).
 
 Mengeluarkan source dan tes dari index Git mempertahankan file lokalnya. Aturan ini berlaku untuk commit berikutnya dan tidak menghapus salinan yang sudah ada di riwayat commit lama.
