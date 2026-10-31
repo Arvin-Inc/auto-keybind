@@ -10,7 +10,7 @@ Repository ini menyediakan kumpulan file *client* SA-MP, installer pendukung, se
 
 Untuk petunjuk langkah demi langkah mengenai cara unduh, pemasangan game dasar, konfigurasi **MoonLoader**, **SAMPFUNCS**, hingga **Plugin Voice**, silakan kunjungi halaman dokumentasi resmi kami:
 
-👉 **[Buka Wiki Panduan Pemasangan](https://github.com/Arvin-Inc/sampSetupIndonesia/wiki/Introduction)**
+👉 **[Buka Wiki Panduan Pemasangan](https://github.com/Arvin-Inc/auto-keybind/wiki/Documentation-AutoKeybind)**
 
 ---
 
