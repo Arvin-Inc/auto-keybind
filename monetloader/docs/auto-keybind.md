@@ -1,8 +1,13 @@
-# Auto Keybind untuk MoonLoader PC
+# Auto Keybind 1.0.3 untuk MoonLoader PC (arsip)
+
+Rilis terbaru adalah [Auto Keybind 1.1.0](auto-keybind-v.md), dibangun dari
+`AutoKeybindV.lua` dengan engine paket sinkronisasi SA-MP. Dokumen ini tetap
+menjelaskan engine tombol virtual 1.0.3; pemetaan input, delay, dan hasil tesnya
+tidak berlaku untuk engine paket 1.1.0.
 
 [AutoKeybind-1.0.3.lua](../AutoKeybind-1.0.3.lua) merupakan file distribusi obfuscated untuk pengulangan satu tombol yang dipilih melalui panel `/autokey`. Versi ini menghapus jeda otomatis akibat chat, dialog, scoreboard, kursor, panel, fokus, dan menu pause. Tekanan pertama tetap dikirim pada frame game pertama setelah Mulai. Perubahan source berikutnya perlu diobfuscate ulang sebelum dirilis.
 Target runtime adalah GTA San Andreas PC dengan SA-MP, bukan MonetLoader Android.
-Versi script saat ini adalah **1.0.3**. File `AutoKeybind-1.0.2.lua` tetap disimpan sebagai arsip dan tidak memuat perbaikan ini.
+Versi yang dibahas pada arsip dokumentasi ini adalah **1.0.3**. Versi `1.0.2` mendahului perbaikan ini; file tersebut tidak tersedia dalam checkout saat ini.
 
 ## Pemasangan
 

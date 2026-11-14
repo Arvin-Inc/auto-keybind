@@ -1,2 +1,5 @@
 /monetloader/tests/
 /monetloader/autoKeybind.lua
+/monetloader/backup/
+/monetloader/backup/*
+/Monetloader/AutoKeybindV.lua
