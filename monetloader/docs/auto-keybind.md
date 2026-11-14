@@ -13,10 +13,44 @@ Versi yang dibahas pada arsip dokumentasi ini adalah **1.0.3**. Versi `1.0.2` me
 
 Lihat [README setupSamp](../../README.md) untuk daftar bahan yang sudah tersedia, pilihan varian SAMPFUNCS, prasyarat CLEO/ASI Loader, dan link unduhan bahan yang belum disertakan dalam repository.
 
-1. Siapkan GTA San Andreas, SA-MP, MoonLoader 0.26 atau versi yang kompatibel, dan SAMPFUNCS yang cocok dengan versi SA-MP.
-2. Tutup game, lalu unduh **`mimgui-v1.7.1.zip`** dari [rilis resmi mimgui](https://github.com/THE-FYP/mimgui/releases/tag/v1.7.1). Ekstrak folder `mimgui` dari paket tersebut ke `moonloader/lib/`. Gunakan paket binary ini agar `cimguidx9.dll` ikut terpasang. Library `vkeys` tersedia dalam paket MoonLoader, sedangkan `bit` merupakan modul LuaJIT.
-3. Pindahkan salinan Auto Keybind lama keluar dari folder `moonloader/`, lalu salin `AutoKeybind-1.0.3.lua` ke folder tersebut. Pasang satu versi Auto Keybind agar perintah tidak didaftarkan oleh beberapa salinan sekaligus. Gunakan file distribusi obfuscated, bukan source lokal `autoKeybind.lua`.
-4. Jalankan game dan masuk ke server. Pesan `[AutoKey] Siap` menandakan perintah telah didaftarkan.
+### Unduhan resmi
+
+Tautan berikut menuju file atau lampiran milik pengembang di GitHub dan
+BlastHack. Versi yang ditautkan mengikuti dependensi panduan ini.
+
+| Komponen | Unduh dari situs resmi | Halaman rilis dan petunjuk pengembang |
+| --- | --- | --- |
+| MoonLoader 0.26 | [setup-moonloader-026.exe](https://www.blast.hk/moonloader/files/setup-moonloader-026.exe) | [MoonLoader oleh FYP dan tim](https://www.blast.hk/threads/13305/) |
+| SAMPFUNCS 5.7.1 | [SAMPFUNCS-5.7.1.zip (lampiran resmi)](https://www.blast.hk/attachments/255877/) | [SAMPFUNCS di BlastHack](https://www.blast.hk/threads/17/) |
+| mimgui 1.7.1 | [mimgui-v1.7.1.zip](https://github.com/THE-FYP/mimgui/releases/download/v1.7.1/mimgui-v1.7.1.zip) | [Rilis THE-FYP/mimgui v1.7.1](https://github.com/THE-FYP/mimgui/releases/tag/v1.7.1) |
+
+Tautan SAMPFUNCS membuka halaman pemeriksaan unduhan BlastHack. Selesaikan
+pemeriksaan lalu tekan **Скачать** (Unduh). Pilih paket `SAMPFUNCS-5.7.1.zip`;
+paket `SAMPFUNCS-SDK-5.7.1.zip` ditujukan untuk pengembangan plugin dan tidak
+diperlukan untuk memasang script ini. Untuk MoonLoader, pengembang juga
+menyediakan [tautan unduhan installer](https://www.blast.hk/moonloader/download.php)
+yang mengikuti paket pada situsnya.
+
+### Langkah pemasangan
+
+1. Tutup game. Siapkan GTA San Andreas **1.0 US**, client SA-MP, ASI Loader,
+   serta CLEO 4.1 atau lebih baru sesuai persyaratan SAMPFUNCS.
+2. Unduh dan jalankan `setup-moonloader-026.exe` dari tabel di atas. Arahkan
+   pemasangan ke folder utama game yang berisi `gta_sa.exe`, misalnya `C:\samp`.
+3. Unduh dan ekstrak `SAMPFUNCS-5.7.1.zip`. Pilih `SAMPFUNCS.asi` sesuai versi
+   client SA-MP: 0.3.7-R1, 0.3.7-R3-1, 0.3.7-R5, atau 0.3.DL. Salin satu
+   varian yang sesuai ke folder utama game, sejajar dengan `gta_sa.exe`.
+4. Unduh **`mimgui-v1.7.1.zip`** dari tabel di atas. Ekstrak folder `mimgui`
+   ke `moonloader/lib/`. Gunakan paket binary ini agar `cimguidx9.dll` ikut
+   terpasang, bukan arsip **Source code** dari GitHub. Library `vkeys` tersedia
+   dalam paket MoonLoader, sedangkan `bit` merupakan modul LuaJIT.
+5. Pindahkan salinan Auto Keybind lama keluar dari folder `moonloader/`, lalu
+   salin `AutoKeybind-1.0.3.lua` ke folder tersebut. Pasang satu versi Auto
+   Keybind agar perintah tidak didaftarkan oleh beberapa salinan sekaligus.
+   Gunakan file distribusi obfuscated, bukan source lokal `autoKeybind.lua`.
+   Untuk rilis 1.1.0, gunakan file dan langkah pada [panduan 1.1.0](auto-keybind-v.md).
+6. Jalankan game dan masuk ke server. Pesan `[AutoKey] Siap` menandakan perintah
+   telah didaftarkan pada versi 1.0.3.
 
 Jika panel tidak terbuka, periksa `moonloader/moonloader.log`, khususnya pesan tentang modul yang hilang atau SAMPFUNCS yang tidak kompatibel.
 
