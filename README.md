@@ -20,7 +20,7 @@ Untuk petunjuk langkah demi langkah mengenai cara unduh, pemasangan game dasar, 
 * 🟡 **SAMPFUNCS:** Varian 5.7.1 untuk berbagai versi client
 * ⚡ **Script terbaru:** [AutoKeybind-1.1.0.lua](monetloader/AutoKeybind-1.1.0.lua), file obfuscated dari AutoKeybindV dengan pengulangan melalui paket sinkronisasi SA-MP. Lihat [panduan Auto Keybind 1.1.0](https://github.com/Arvin-Inc/auto-keybind/wiki/Documentation-AutoKeybind).
 
-Versi [1.0.3](monetloader/AutoKeybind-1.0.3.lua) tetap tersedia sebagai arsip engine tombol virtual; lihat [panduan 1.0.3](monetloader/docs/auto-keybind.md). Gunakan `1.1.0` untuk engine paket dari AutoKeybindV dan pasang hanya satu versi di folder `moonloader/`.
+Versi [1.0.3](monetloader/AutoKeybind-1.0.3.lua) tetap tersedia sebagai arsip engine tombol virtual; lihat [panduan 1.0.3](https://github.com/Arvin-Inc/auto-keybind/wiki/Documentation-AutoKeybind). Gunakan `1.1.0` untuk engine paket dari AutoKeybindV dan pasang hanya satu versi di folder `moonloader/`.
 
 Untuk mendapatkan source di atas anda bisa kunjungin [Release](https://github.com/Arvin-Inc/sampSetupIndonesia/releases)
 
@@ -36,7 +36,7 @@ Pasang satu varian `/autokey` agar tidak berbenturan dengan 1.0.3.
 Source varian ini dan folder tes tetap diabaikan Git. Versi dinaikkan ke `1.1.0`
 karena perubahan engine input dari tombol virtual menjadi paket sinkronisasi.
 
-Lihat [panduan Auto Keybind 1.1.0 dan perbandingan input](monetloader/docs/auto-keybind-v.md)
+Lihat [panduan Auto Keybind 1.1.0 dan perbandingan input](https://github.com/Arvin-Inc/auto-keybind/wiki/Documentation-AutoKeybind)
 untuk dependensi, asal pemulihan, perubahan GUI, pemetaan paket, serta hasil
 14 kelompok tes stub yang lulus pada source dan file obfuscated. Penerimaan aksi
 server dan rendering di game belum diverifikasi.
