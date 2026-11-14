@@ -18,7 +18,9 @@ Untuk petunjuk langkah demi langkah mengenai cara unduh, pemasangan game dasar, 
 
 * 🔵 **MoonLoader:** `setup-moonloader-026.exe` (v0.26)
 * 🟡 **SAMPFUNCS:** Varian 5.7.1 untuk berbagai versi client
-* ⚡ **Script:** Auto Keybind (`AutoKeybind-1.0.2.lua`)
+* ⚡ **Script terbaru:** [AutoKeybind-1.0.3.lua](monetloader/AutoKeybind-1.0.3.lua), file obfuscated dengan pengulangan tanpa jeda akibat chat atau panel. Lihat [panduan Auto Keybind](monetloader/docs/auto-keybind.md).
+
+Versi `1.0.2` tetap tersedia sebagai arsip. Gunakan `1.0.3` untuk perbaikan ini dan pasang hanya satu versi di folder `moonloader/`.
 
 Untuk mendapatkan source di atas anda bisa kunjungin [Release](https://github.com/Arvin-Inc/sampSetupIndonesia/releases)
 
