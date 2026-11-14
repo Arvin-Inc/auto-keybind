@@ -51,8 +51,8 @@ Klik **Mulai** menandai tekanan awal sebagai siap dikirim oleh loop game. Tekana
 - Panel tetap terbuka setelah Mulai diklik. Membuka atau menutup panel tidak melepas tombol, menjeda pengulangan, maupun mengatur ulang jadwal tekanan.
 - Mengubah pilihan melepas tombol lama dan menjadwalkan tombol baru setelah delay yang dipilih. Saat script belum berjalan, pilihan tersebut akan digunakan pada klik Mulai berikutnya.
 - Menutup panel melalui X, Escape, atau `/autokey` hanya menyembunyikan panel. Klik **Berhenti** atau gunakan F10 untuk mematikan pengulangan.
-- Pengulangan dijeda saat menu pause aktif atau jendela game kehilangan fokus. Kursor SA-MP menjadi kondisi jeda ketika panel Auto Keybind tertutup; saat panel terbuka, kursor tidak memblokir pengulangan. Tekanan awal yang belum terkirim tetap siap untuk frame pertama setelah jeda. Untuk pengulangan yang sudah berjalan, jeda tetap diikuti delay sebelum tekanan berikutnya.
-- Kondisi `inputBlocked()` pada source saat ini tidak memeriksa chat, dialog SA-MP, atau scoreboard. Panel Auto Keybind tidak menambah kondisi jeda tersendiri.
+- Pengulangan dijeda saat menu pause aktif atau jendela game kehilangan fokus. Kursor SA-MP menjadi kondisi jeda ketika panel Auto Keybind tertutup; saat panel terbuka, kursor tidak memblokir pengulangan. Tekanan awal yang belum terkirim tetap siap untuk frame pertama setelah jeda. Untuk pengulangan yang sudah berjalan, sisa delay sebelum tekanan berikutnya dilanjutkan setelah jeda selesai, tidak dimulai ulang dari nol.
+- Kondisi `inputBlocked()` juga memeriksa chat, dialog SA-MP, dan scoreboard. Selama salah satunya aktif, tombol tidak ditekan.
 - Berhenti atau F10 membatalkan tekanan awal yang belum terkirim, sehingga tekanan tersebut tidak muncul setelah script dihentikan.
 - Status panel menampilkan **berjalan**, **dijeda**, atau **berhenti** sesuai keadaan pengulangan.
 - Bagian bawah panel menampilkan **Author: Arvin_Inc**, setelah petunjuk delay dan pintasan. Tinggi panel 410 piksel menyediakan ruang untuk teks author.
@@ -81,6 +81,8 @@ Source `monetloader/autoKeybind.lua` dan folder `monetloader/tests/` diabaikan o
 npx --yes --package fengari-node-cli@0.1.0 fengari tests/autoKeybind.spec.lua
 npx --yes --package fengari-node-cli@0.1.0 fengari tests/autoKeybind.spec.lua AutoKeybind-1.0.2.lua
 ```
+
+Verifikasi tambahan pada build ini memakai stub MoonLoader di Fengari: sintaks Lua 5.1 valid, 38 string terdekode sama dengan source, Mulai memicu tekanan pada frame berikutnya, tidak ada tekanan saat chat terbuka, dan sisa delay dipertahankan setelah jeda.
 
 Hasil verifikasi source dan file distribusi obfuscated:
 
@@ -113,6 +115,6 @@ Source asli tetap disimpan lokal sebagai `autoKeybind.lua`. File distribusi mema
 
 Build ini menggunakan [luamin 1.0.4](https://github.com/mathiasbynens/luamin/tree/v1.0.4) untuk pemadatan dan penggantian nama variabel lokal, serta penyamaran string berbasis angka. Sebanyak 38 string dikodekan dan diperiksa agar hasil pembacaannya tetap sama. Fungsi global `main`, `onWindowMessage`, dan `onScriptTerminate` dipertahankan agar MoonLoader tetap menemukan callback-nya. Tidak ada loader `loadstring`, unduhan kode saat runtime, atau kebutuhan library tambahan dari proses obfuscation ini.
 
-Header distribusi mencatat versi, author `Arvin_Inc`, dan SHA256 source yang dipakai. Hash source build ini adalah `10192174612492125d0687787b5826b072f09009f427b12e4e8e2d8ef69db141`. Source tidak diubah saat file distribusi dibuat.
+Header distribusi mencatat versi, author `Arvin_Inc`, dan SHA256 source yang dipakai. Hash source build ini adalah `d632946be990714652bbd998d15b309e48546a2bdd5e2d86287f74e7548e27d4`. Source tidak diubah saat file distribusi dibuat.
 
 Obfuscation mempersulit pembacaan langsung, tetapi kode dan string tetap dapat dianalisis atau dipulihkan oleh pihak yang memiliki file. Source di riwayat commit lama tetap ada. Artefak perlu dibuat ulang setelah source diperbaiki, lalu diperiksa dengan pengujian yang sama sebelum didistribusikan. Pasang satu versi Auto Keybind pada folder game agar callback dan perintah `/autokey` tidak berjalan ganda.
