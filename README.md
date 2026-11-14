@@ -18,9 +18,9 @@ Untuk petunjuk langkah demi langkah mengenai cara unduh, pemasangan game dasar, 
 
 File berikut tidak disediakan langsung di repo ini. Unduh dari situs resmi masing-masing agar mendapatkan versi terbaru:
 
-* 🔵 **MoonLoader:** `setup-moonloader-026.exe` (v0.26)
+* 🔵 **MoonLoader:** `setup-moonloader-026.exe` (v0.26) — unduh di [situs resmi MoonLoader](https://www.blast.hk/moonloader/download.php)
 * 🟡 **SAMPFUNCS:** Varian 5.7.1 untuk berbagai versi client
-* 🟢 **mimgui:** Library untuk GUI MoonLoader
+* 🟢 **mimgui:** Library untuk GUI MoonLoader — unduh di [repo resmi mimgui](https://github.com/THE-FYP/mimgui/tags)
 * ⚡ **Script terbaru:** [AutoKeybind-1.1.0.lua](monetloader/AutoKeybind-1.1.0.lua), file obfuscated dari AutoKeybindV dengan pengulangan melalui paket sinkronisasi SA-MP. Lihat [panduan Auto Keybind 1.1.0](https://github.com/Arvin-Inc/auto-keybind/wiki/Documentation-AutoKeybind).
 
 Versi [1.0.3](monetloader/AutoKeybind-1.0.3.lua) tetap tersedia sebagai arsip engine tombol virtual; lihat [panduan 1.0.3](https://github.com/Arvin-Inc/auto-keybind/wiki/Documentation-AutoKeybind). Gunakan `1.1.0` untuk engine paket dari AutoKeybindV dan pasang hanya satu versi di folder `moonloader/`.
