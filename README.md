@@ -23,7 +23,7 @@ File berikut tidak disediakan langsung di repo ini. Unduh dari situs resmi masin
 * 🟢 **mimgui:** Library untuk GUI MoonLoader — unduh di [repo resmi mimgui](https://github.com/THE-FYP/mimgui/tags)
 * ⚡ **Script terbaru:** [AutoKeybind-1.1.0.lua](monetloader/AutoKeybind-1.1.0.lua), file obfuscated dari AutoKeybindV dengan pengulangan melalui paket sinkronisasi SA-MP. Lihat [panduan Auto Keybind 1.1.0](https://github.com/Arvin-Inc/auto-keybind/wiki/Documentation-AutoKeybind).
 
-Versi [1.0.3](monetloader/AutoKeybind-1.0.3.lua) tetap tersedia sebagai arsip engine tombol virtual; lihat [panduan 1.0.3](https://github.com/Arvin-Inc/auto-keybind/wiki/Documentation-AutoKeybind). Gunakan `1.1.0` untuk engine paket dari AutoKeybindV dan pasang hanya satu versi di folder `moonloader/`.
+Gunakan `1.1.0` untuk engine paket dari AutoKeybind 1.1.0 dan pasang hanya satu versi di folder `moonloader/`.
 
 Untuk mendapatkan source di atas anda bisa kunjungin [Release](https://github.com/Arvin-Inc/sampSetupIndonesia/releases)
 
